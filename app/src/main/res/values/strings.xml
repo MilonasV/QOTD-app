@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">QOTD</string>
+    <string name="btn_reroll">Re-roll Quote</string>
+
+
+    <!--THESE SHOULD GET DATA FROM MY JSON, WELCOME MESSAGE WILL GET THE USERNAME FROM SHARED PREFS-->
+    <string name="welcome_message">Welcome %s, your quote for today is:</string>
+    <string name="quote">%s</string>
+    <string name="game">%s</string>
+    <string name="character">--%s</string>
 </resources>
