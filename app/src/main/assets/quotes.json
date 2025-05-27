@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "quote": "Stand in the ashes of a trillion dead souls and ask the ghosts if honor matters, the silence is your answer.",
+    "game": "Mass Effect",
+    "character": "Javik"
+  }
+{
+    "id": 2,
+    "quote": "A lesson in courage often begins with fear.",
+    "game": "Mass Effect",
+    "character": "Thane"
+  }
+{
+    "id": 3,
+    "quote": "What is better - to be born good, or to overcome your evil nature through great effort?",
+    "game": "Skyrim",
+    "character": "Paarthurnax"
+  }
+{
+    "id": 4,
+    "quote": "Conscience is but a word that cowards use, devised at first to keep the strong in awe.",
+    "game": "Kingdom Come: Deliverance",
+    "character": "Hans Capon"
+  }
+{
+    "id": 5,
+    "quote": "It's not about sin. It's about who you are when no one's watching",
+    "game": "Kingdom Come: Deliverance",
+    "character": "Father Godwin"
+  }
+{
+    "id": 6,
+    "quote": "Wake the f*** up, Samurai. We have a city to burn.",
+    "game": "Cyberpunk 2077",
+    "character": "Johnny Silverhand"
+  }
+{
+    "id": 7,
+    "quote": "Remind yourself that overconfidence is a slow and insidious killer.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 8,
+    "quote": "There can be no bravery without madness.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 9,
+    "quote": "You exist because we allow it, and you will end because we demand it.",
+    "game": "Mass Effect",
+    "character": "Sovereign"
+  }
+{
+    "id": 10,
+    "quote": "No lollygaggin'",
+    "game": "Skyrim",
+    "character": "Guard"
+  }
+{
+    "id": 11,
+    "quote": "Wind's howling...",
+    "game": "The Witcher",
+    "character": "Geralt"
+  }
+{
+    "id": 12,
+    "quote": "I’m in the middle of some calibrations...",
+    "game": "Mass Effect",
+    "character": "Garrus"
+  }
+{
+    "id": 13,
+    "quote": "Seize the day... then set it on fire.",
+    "game": "Cyberpunk 2077",
+    "character": "Johnny Silverhand"
+  }
+{
+    "id": 14,
+    "quote": "The abyss returns even the boldest gaze.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 15,
+    "quote": "Success… so clearly in view. Or is it merely a trick of the light?",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 16,
+    "quote": "You think you’re a warrior? You’re just a butcher hiding behind armor.",
+    "game": "Kingdom Come: Deliverance",
+    "character": "Henry"
+  }
+{
+    "id": 17,
+    "quote": "You either burn with the brightest flame or you fade the f*** out.",
+    "game": "Cyberpunk 2077",
+    "character": "Johnny Silverhand"
+  }
+{
+    "id": 18,
+    "quote": "They’ll never understand. Never get it. That burning need to leave something behind. A mark. A scar.",
+    "game": "Cyberpunk 2077",
+    "character": "Johnny Silverhand"
+  }
+{
+    "id": 19,
+    "quote": "You are brave. I do not doubt that. But can you survive what lies ahead?",
+    "game": "Skyrim",
+    "character": "Kodlak Whitman"
+  }
+{
+    "id": 20,
+    "quote": "The world doesn’t need a hero. It needs a professional.",
+    "game": "The Witcher",
+    "character": "Gerald"
+  }
+{
+    "id": 21,
+    "quote": "Steel speaks louder than any noble’s decree.",
+    "game": "Kingdom Come: Deliverance",
+    "character": "Sir Radzig"
+  }
+{
+    "id": 22,
+    "quote": "The strongest dog f***s the bitches.",
+    "game": "Kingdom Come: Deliverance",
+    "character": "Istvan Toth"
+  }
+{
+    "id": 23,
+    "quote": "A moment of valor shines brightest against a backdrop of despair.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 24,
+    "quote": "Had to be me. Someone else might have gotten it wrong.",
+    "game": "Mass Effect",
+    "character": "Mordin"
+  }
+{
+    "id": 25,
+    "quote": "Sometimes, you just have to laugh at the absurdity of it all.",
+    "game": "Cyberpunk 2077",
+    "character": "Johnny Silverhand"
+  }
+{
+    "id": 26,
+    "quote": "May your road lead you to warm sands.",
+    "game": "Skyrim",
+    "character": "Ri'Saad"
+  }
+{
+    "id": 27,
+    "quote": "Kahjiit has wares, if you have coin.",
+    "game": "Skyrim",
+    "character": "Ri'Saad"
+  }
+{
+    "id": 28,
+    "quote": "Lambert, Lambert, what a prick.",
+    "game": "The Witcher",
+    "character": "Gerald"
+  }
+{
+    "id": 29,
+    "quote": "Triumphant pride precipitates a dizzying fall.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 30,
+    "quote": "Continue the onslaught. Destroy. Them. All.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 31,
+    "quote": "Seize this momentum – push to the task’s end.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 32,
+    "quote": "Resignation turns to desperation. Desperation turns to madness.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 33,
+    "quote": "Face your failure, or be consumed by it.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 34,
+    "quote": "This is your path. Step boldly, traveler.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 35,
+    "quote": "In a world full of chaos, a calm mind is the ultimate weapon.",
+    "game": "Cyberpunk 2077",
+    "character": "Takemura"
+  }
+{
+    "id": 36,
+    "quote": "Skyrim belongs to the Nords!",
+    "game": "Skyrim",
+    "character": "Ulfric Stormcloak"
+  }
+{
+    "id": 30,
+    "quote": "Continue the onslaught. Destroy. Them. All.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 30,
+    "quote": "Continue the onslaught. Destroy. Them. All.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 30,
+    "quote": "Continue the onslaught. Destroy. Them. All.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+{
+    "id": 30,
+    "quote": "Continue the onslaught. Destroy. Them. All.",
+    "game": "Darkest Dungeon",
+    "character": "Wayne June"
+  }
+]
