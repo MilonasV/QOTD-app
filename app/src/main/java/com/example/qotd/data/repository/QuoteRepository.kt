@@ -1,7 +1,9 @@
 package com.example.qotd.data.repository
 
 import android.util.Log
+import com.example.qotd.R
 import com.example.qotd.data.api.QuotesApi
+import com.example.qotd.data.model.Game
 import com.example.qotd.data.model.Quote
 import com.example.qotd.di.NetworkModule
 import retrofit2.HttpException
@@ -31,6 +33,28 @@ class QuoteRepository {
         } catch (e: Exception) {
             Log.e("QuoteRepository", "💥 Unknown Exception: ${e.message}", e)
             Result.Failure(UnknownException("Unexpected error: ${e.message}"))
+        }
+    }
+
+    suspend fun getSelectableGames(): Result<List<Game>> {
+        val gamesResult = getUniqueGames()
+
+        return if (gamesResult is Result.Success) {
+            try {
+                val gameNames: List<String> = gamesResult.data
+                val gameObjects = gameNames.map { gameName ->
+                    Game(
+                        game = gameName,
+                        isSelected = false,
+                        imageId = getGameIcon(gameName)
+                    )
+                }
+                Result.Success(gameObjects)
+            } catch (e: Exception) {
+                Result.Failure(UnknownException("Failed to convert games: ${e.message}"))
+            }
+        } else {
+            Result.Failure((gamesResult as Result.Failure).exception)
         }
     }
 
@@ -93,6 +117,26 @@ sealed class Result<out T> {
         }
     }
 }
+
+
+private fun getGameIcon(gameName: String): Int {
+    return when (gameName.lowercase()) {
+        "skyrim" -> R.drawable.skyrim
+        "darkest dungeon" -> R.drawable.dd
+        "kingdom come: deliverance" -> R.drawable.kcd
+        "the witcher" -> R.drawable.witcher
+        "cyberpunk 2077" -> R.drawable.cyberpunk
+
+        else -> {
+            R.drawable.ic_launcher_background // Fallback icon
+        }
+    }
+}
+
+
+
+
+
 
 // Custom Exception classes for better error handling
 class NetworkException(message: String) : Exception(message)

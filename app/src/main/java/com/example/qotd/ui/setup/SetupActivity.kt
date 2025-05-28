@@ -5,9 +5,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.qotd.R
 
 class SetupActivity : AppCompatActivity() {
+
+    private lateinit var setupViewModel: SetupViewModel
 
     private var currentStep = 1
     private val totalSteps = 3
@@ -20,6 +23,8 @@ class SetupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setup)
+
+        setupViewModel = ViewModelProvider(this)[SetupViewModel::class.java]
 
         progressBar = findViewById(R.id.progress_bar)
         previousButton = findViewById(R.id.btn_previous)
@@ -95,4 +100,7 @@ class SetupActivity : AppCompatActivity() {
             // 3 -> showStep3()
         }
     }
+
+
+    fun getSetupViewModel(): SetupViewModel = setupViewModel
 }

@@ -6,4 +6,6 @@ import retrofit2.http.GET
 interface QuotesApi {
     @GET("quotes.json")
     suspend fun getQuotes(): List<Quote>
+
+
 }
