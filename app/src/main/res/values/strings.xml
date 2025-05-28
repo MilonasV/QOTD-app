@@ -2,7 +2,11 @@
     <string name="app_name">QOTD</string>
     <string name="btn_reroll">Re-roll Quote</string>
     <string name="btn_next">Next</string>
+    <string name="btn_finish">Finish</string>
     <string name="btn_previous">Previous</string>
+    <string name="tv_welcomemsg">Welcome to my QoTD app. Let\'s personalize your experience!</string>
+    <string name="tv_nameinput">Please enter your name:</string>
+    <string name="et_name_hint">Your name</string>
 
 
     <!--THESE SHOULD GET DATA FROM MY JSON, WELCOME MESSAGE WILL GET THE USERNAME FROM SHARED PREFS-->

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_welcomemsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_welcomemsg"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_nameinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/tv_nameinput"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginBottom="48dp"
+        />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:autofillHints="name"
+        android:hint="@string/et_name_hint"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+
+         />
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+
