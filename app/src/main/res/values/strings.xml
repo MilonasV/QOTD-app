@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">QOTD</string>
     <string name="btn_reroll">Re-roll Quote</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_previous">Previous</string>
 
 
     <!--THESE SHOULD GET DATA FROM MY JSON, WELCOME MESSAGE WILL GET THE USERNAME FROM SHARED PREFS-->
@@ -8,4 +10,5 @@
     <string name="quote">%s</string>
     <string name="game">%s</string>
     <string name="character">--%s</string>
+
 </resources>
