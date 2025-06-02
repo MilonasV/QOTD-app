@@ -1,5 +1,6 @@
 package com.example.qotd.ui.setup
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -7,6 +8,7 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.qotd.R
+import com.example.qotd.ui.home.HomeActivity
 
 class SetupActivity : AppCompatActivity() {
 
@@ -22,9 +24,20 @@ class SetupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_setup)
+
 
         setupViewModel = ViewModelProvider(this)[SetupViewModel::class.java]
+
+
+        if (setupViewModel.isSetupCompleted()){
+            // If setup is already completed, redirect to HomeActivity
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+        setContentView(R.layout.activity_setup)
+
 
         progressBar = findViewById(R.id.progress_bar)
         previousButton = findViewById(R.id.btn_previous)
@@ -61,10 +74,37 @@ class SetupActivity : AppCompatActivity() {
             .commit()
     }
 
+    private fun showStep3() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, Step3Fragment())
+            .commit()
+    }
+
 
     private fun handleNextClick() {
-        if (currentStep < totalSteps) {
 
+        if (currentStep == 1) {
+            val step1Fragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as Step1Fragment
+            if (!step1Fragment.validateName()) {
+                return
+            }
+            //Else Save the name from Step 1 and proceed
+            step1Fragment.saveName()
+        }
+
+
+        // If we are on step 3, take the user to the home screen and mark setup as completed
+        if (currentStep == totalSteps) {
+            setupViewModel.markSetupCompleted()
+
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+
+            // Close the SetupActivity, we don't need it anymore
+            finish()
+
+        }
+        else {
             currentStep++
             updateUI()
             showCurrentStep()
@@ -97,7 +137,7 @@ class SetupActivity : AppCompatActivity() {
         when (currentStep) {
             1 -> showStep1()
             2 -> showStep2()
-            // 3 -> showStep3()
+            3 -> showStep3()
         }
     }
 

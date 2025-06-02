@@ -10,14 +10,18 @@ import com.example.qotd.R
 
 class Step1Fragment : Fragment() {
 
+
     private lateinit var nameEditText: EditText
-    //private lateinit var setupViewModel: ViewModel
+    private lateinit var setupViewModel: SetupViewModel
+
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setupViewModel = (requireActivity() as SetupActivity).getSetupViewModel()
+
         return inflater.inflate(R.layout.fragment_step1, container, false)
     }
 
@@ -25,22 +29,49 @@ class Step1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //setupViewModel = ViewModelProvider(requireActivity())[SetupViewModel::class.java]
-
-
         nameEditText = view.findViewById(R.id.et_name)
-
+        loadName()
 
     }
 
+
+    fun saveName() {
+        val name = getName()
+        if (name.isEmpty()) {
+            nameEditText.error = getString(R.string.error_name_required)
+        } else {
+            // Save the name to ViewModel or wherever needed
+            setupViewModel.updateUserName(name)
+        }
+
+
+    }
 
     fun getName(): String {
         return nameEditText.text.toString().trim()
     }
 
-    fun isNameValid(): Boolean {
-        val name = getName()
-        return name.isNotEmpty() && name.length >= 3
+    fun loadName() {
+        // Load the name from ViewModel or wherever it is stored
+        val name = setupViewModel.loadUserName()
+        nameEditText.setText(name)
     }
+
+
+    fun validateName(): Boolean {
+        val name = getName()
+        return if (name.isEmpty() || name.length < 3) {
+            nameEditText.error = getString(R.string.error_name_required)
+            false
+        } else {
+            true
+        }
+    }
+
+
+
+
+
+
 
 }

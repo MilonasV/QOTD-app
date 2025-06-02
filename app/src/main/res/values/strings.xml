@@ -7,6 +7,7 @@
     <string name="tv_welcomemsg">Welcome to my QoTD app. Let\'s personalize your experience!</string>
     <string name="tv_nameinput">Please enter your name:</string>
     <string name="et_name_hint">Your name</string>
+    <string name="error_name_required">Name length > 3 is required</string>
 
 
     <!--THESE SHOULD GET DATA FROM MY JSON, WELCOME MESSAGE WILL GET THE USERNAME FROM SHARED PREFS-->

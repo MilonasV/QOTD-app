@@ -44,7 +44,8 @@ dependencies {
     // Core Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.appcompat) // This was missing!
+    implementation(libs.androidx.appcompat)
+
 
     // UI - Keep your existing
     implementation(libs.androidx.activity.compose)
@@ -62,12 +63,9 @@ dependencies {
     implementation(libs.logging.interceptor)
 
     // ViewModel & Coroutines
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-
-    // Remove these problematic ones:
-    // implementation(libs.androidx.room.compiler.processing.testing) // ❌ Remove this
-    // implementation(libs.play.services.basement) // ❌ Remove this unless you need Google Play services
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.datastore.core.android)
 
     // Testing
     testImplementation(libs.junit)

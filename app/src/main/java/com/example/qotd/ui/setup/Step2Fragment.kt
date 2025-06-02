@@ -17,11 +17,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
@@ -50,7 +45,6 @@ class Step2Fragment : Fragment() {
 @Composable
 fun GameSelectionScreen(viewModel: SetupViewModel) {
 
-
     Column(modifier = Modifier.padding(16.dp)) {
         Text(
             text = "Choose your favorite games",
@@ -68,6 +62,7 @@ fun GameSelectionScreen(viewModel: SetupViewModel) {
                 Text("Loading games...")
             }
         } else {
+
             // Use real data from repository
             viewModel.availableGames.forEach { game ->
                 Row(
